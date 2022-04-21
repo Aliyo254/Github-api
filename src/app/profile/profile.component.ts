@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile-service/profile-service.service';
 
-@Component({
-  selector: 'app-repository',
-  templateUrl: './repository.component.html',
-  styleUrls: ['./repository.component.css']
 
+@Component({
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class RepositoryComponent implements OnInit {
+export class ProfileComponent implements OnInit {
   profile:any;
   repos:any;
   username!:string;

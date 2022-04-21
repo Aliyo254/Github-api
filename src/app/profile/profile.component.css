@@ -1,0 +1,28 @@
+.search-form{
+    height: 10px;
+    width: 260px; 
+    padding-top: 50px;
+    margin: 100px;
+    align-items: center;
+    align-content: center;    
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+#btn {
+    align-content: center;
+    background-color:#b7b8fd;
+}
+.card{
+    background-color: #adcbd6;
+}
+.card-header{
+    background-color: #B4A5A5;
+}
+/* .whole{
+    background-color: #B0EACD;
+} */
+#twty{
+    background-color: #D8E3E7;
+}

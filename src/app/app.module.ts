@@ -1,34 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { FormsModule } from '@angular/forms';
+import { ProfileService } from './profile-service/profile-service.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
-import { DateCountPipe } from './date-count.pipe';
-import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
-import { GitFormComponent } from './git-form/git-form.component';
-import { RepositoriesComponent } from './repositories/repositories.component';
-import { RepositoryComponent } from './repository/repository.component';
 
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    DateCountPipe,
     NavbarComponent,
-    GitFormComponent,
-    RepositoriesComponent,
-    RepositoryComponent,
-
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,119 @@
+<div class="container">
+    <h1>
+      
+    </h1>
+    <form action="" class="search-form">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search git users with username"
+          [(ngModel)]="username"
+          name="username"
+          (keyup)="submitInput()"
+        />
+        <button
+          (click)="submitInput()"
+          type="submit"
+          class="btn btn-outline-success btn-hov"
+        >
+          Search<i class="fa fa-search"></i>
+        </button>
+      </div>
+    </form>
+    <div *ngIf="profile">
+      <div class="card">
+        <div class="card-header">
+          {{ profile.name }} <small>({{ profile.login }})</small>
+          <span *ngIf="profile.company">, Works at {{ profile.company }}</span>
+          in {{ profile.location }}.
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <img
+                src="{{ profile.avatar_url }}"
+                class="rounded-circle img-responsive"
+                alt="Profile Avatar"
+                data-holder-rendered="true"
+                style="width: 90%"
+              />
+              <p>
+                <a
+                  href="{{ profile.html_url }}"
+                  class="btn btn-success btn-small"
+                  >View Profile</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-group">
+                <li class="list-group-item" *ngIf="profile.bio">
+                  twitter_username:
+                  {{ profile.twitter_username }}
+                </li>
+                <li class="list-group-item" *ngIf="profile.bio">
+                  {{ profile.bio }}
+                </li>
+                <li class="list-group-item" *ngIf="profile.hireable">
+                  Available for hire
+                </li>
+                <li class="list-group-item" *ngIf="profile.blog">
+                  <a href="{{ profile.blog }}" target="_blank">{{
+                    profile.blog
+                  }}</a>
+                </li>
+                <li class="list-group-item" *ngIf="profile.email">
+                  <a href="emailto:{{ profile.email }}">{{ profile.email }}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <span class="label label-default"
+                >{{ profile.followers }} Followers</span
+              >
+              <br />
+              <span class="label label-primary"
+                >{{ profile.following }} Following</span
+              >
+              <br />
+              <span class="label label-success"
+                >{{ profile.public_gists }} Public gists</span
+              >
+              <br />
+              <span class="label label-info"
+                >{{ profile.public_repos }} Public Repos</span
+              ><br />
+            </div>
+
+            <div class="col-md-12">
+              <div class="row">
+                <div id= "twty"class="col-md-4 card" *ngFor="let repo of repos">
+                  <p class="clearfix">
+                    {{ repo.name }}
+                    <a
+                      href="{{ repo.html_url }}"
+                      target="_blank"
+                      class="btn btn-warning btn-sm float-right"
+                      id="btn"
+                      >View this project on Github</a
+                    >
+                  </p>
+                  <p>Number of forks: {{ repo.forks }}</p>
+                  <p>Description: {{ repo.description }}</p>
+                  <p>Language: {{ repo.language }}</p>
+                  <div class="date">
+                    <small
+                      ><span>last modified:</span>{{ repo.updated_at | date }}
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

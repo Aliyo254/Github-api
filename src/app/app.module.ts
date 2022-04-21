@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GitFormComponent } from './git-form/git-form.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { RepositoryComponent } from './repository/repository.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     NavbarComponent,
     GitFormComponent,
     RepositoriesComponent,
+    RepositoryComponent,
 
   ],
   imports: [

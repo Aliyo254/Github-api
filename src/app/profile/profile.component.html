@@ -92,21 +92,9 @@
                 <div id= "twty"class="col-md-4 card" *ngFor="let repo of repos">
                   <p class="clearfix">
                     {{ repo.name }}
-                    <a
-                      href="{{ repo.html_url }}"
-                      target="_blank"
-                      class="btn btn-warning btn-sm float-right"
-                      id="btn"
-                      >View this project on Github</a
-                    >
-                  </p>
-                  <p>Number of forks: {{ repo.forks }}</p>
-                  <p>Description: {{ repo.description }}</p>
-                  <p>Language: {{ repo.language }}</p>
-                  <div class="date">
-                    <small
-                      ><span>last modified:</span>{{ repo.updated_at | date }}
-                    </small>
+                    </p>
+                  
+                  
                   </div>
                 </div>
               </div>
@@ -115,5 +103,5 @@
         </div>
       </div>
     </div>
-  </div>
+  
 

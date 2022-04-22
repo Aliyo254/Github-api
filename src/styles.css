@@ -1,1 +1,10 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai|Berkshire+Swash|Lustria|Old+Standard+TT|Pangolin&display=swap');
+
+body{
+    background-image: url("https://avatars.githubusercontent.com/u/94452624?v=4");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
